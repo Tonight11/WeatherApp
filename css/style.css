@@ -1,0 +1,256 @@
+@charset "UTF-8";
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Убираем внутренние отступы */
+ul,
+ol {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul,
+ol {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a {
+  text-decoration: none;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+textarea,
+input {
+  background-color: inherit;
+  outline: none;
+  border: none;
+  overflow: auto;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  resize: none;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 15px;
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #003c57 100%);
+}
+
+.weather {
+  width: 400px;
+  max-width: 100%;
+  position: relative;
+}
+
+.weather__form {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.weather__form input {
+  padding: .6em 1em;
+  border-radius: 18px;
+  border: 1px solid black;
+}
+
+.weather__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.weather__city {
+  font-size: 26px;
+}
+
+.weather__temperature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.weather__temperature span {
+  font-size: 34px;
+}
+
+.weather__degree {
+  font-size: 46px;
+  margin-right: 10px;
+}
+
+.weather__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.cloud {
+  position: absolute;
+  width: 320px;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 768px) {
+  .cloud {
+    width: 220px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .cloud {
+    width: 175px;
+  }
+}
+
+.cloud-one {
+  top: 0;
+  right: 0;
+}
+
+.cloud-two {
+  top: 0;
+  left: 0;
+}
+
+.cloud-three {
+  bottom: 0;
+  right: 0;
+}
+
+.cloud-fourth {
+  bottom: 0;
+  left: 0;
+}
+
+.hourly {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hourly__weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.hourly__weather:last-child {
+  margin: 0;
+}
+
+.hourly__weather span {
+  font-size: 24px;
+}
+
+.hourly__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hourly__one, .hourly__two, .hourly__three, .hourly__four {
+  font-size: 36px;
+}
