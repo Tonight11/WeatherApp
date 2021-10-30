@@ -86,29 +86,3 @@ if (navigator.geolocation) {
 			})
 	})
 }
-
-
-// 	fetch(apiFirst)
-// 		.then(response => {
-// 			return response.json();
-// 		})
-// 		.then(data => {
-// 			console.log(data);
-// 			const { description, icon } = data.weather[0]
-// 			const { temp } = data.main;
-// 			const name = data.name;
-
-// 			const weatherIcon = `https://openweathermap.org/img/wn/${icon}@2x.png`;
-
-// 			city.textContent = name;
-// 			degree.textContent = temp;
-// 			desc.textContent = description;
-// 			iconMain.setAttribute('src', weatherIcon)
-// 		})
-// 		.catch(() => {
-// 			desc.textContent = "Please search for a valid city 😩";
-// 		});
-
-
-// 	input.value = '';
-// })
